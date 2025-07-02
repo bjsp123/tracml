@@ -4,6 +4,8 @@ import tracdap.rt.api as trac
 import pandas as pd
 import tensorflow as tf
 
+import schemas as schemas
+
 
 class PandaModel(trac.TracModel):
     def define_parameters(self) -> tp.Dict[str, trac.ModelParameter]:
@@ -11,10 +13,16 @@ class PandaModel(trac.TracModel):
        return {}
     
     def define_inputs(self) -> tp.Dict[str, trac.ModelInputSchema]:
-        return {}
+        approved_loans = trac.load_schema(schemas, "loans_schema_kaggle.csv")
+
+        return {"approved_loans": trac.ModelInputSchema(approved_loans)}
 
     def define_outputs(self) -> tp.Dict[str, trac.ModelOutputSchema]:
-        return {}
+        dq_metrics = trac.define_output_table(
+            trac.F("metric1", trac.FLOAT, label="Metric 1"),
+            trac.F("metric2", trac.FLOAT, label="Metric 2"))
+
+        return {"loans_dq_metrics": dq_metrics}
 
 
     def run_model(self, ctx: trac.TracContext):
