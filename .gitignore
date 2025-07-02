@@ -1,3 +1,6 @@
+#don't version control outputs
+data/outputs/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -1,9 +1,10 @@
 job:
   runModel:
     parameters:
-      testparam: 1
+
     inputs:
-      approved_loans: "C:/Users/hwach/Documents/datasets/accepted_2007_to_2018Q4.csv"
+      approved_loans: "inputs/accepted_loans_truncated.csv"
 
     outputs:
-      loans_dq_metrics: "C:/Users/hwach/Documents/tracproj/dq_outputs.csv"
+      loans_dq_metrics: "outputs/dq_outputs.csv"
+      approved_loans_clean: "outputs/accepted_cleaned.csv"
