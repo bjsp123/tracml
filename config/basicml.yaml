@@ -1,0 +1,9 @@
+job:
+  runModel:
+    parameters:
+
+    inputs:
+      approved_loans: "inputs/accepted_loans_truncated.csv"
+
+    outputs:
+      conclusions: "outputs/loans_results.csv"

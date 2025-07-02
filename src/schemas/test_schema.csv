@@ -1,6 +1,0 @@
-field_name, field_type, label, categorical, business_key, not_null, format_code
-id, FLOAT, id, ,true , , 
-member_id, STRING, member_id, , , , 
-loan_amnt, STRING, loan_amnt, , , , 
-funded_amnt, STRING, funded_amnt, , , , 
-funded_amnt_inv, STRING, funded_amnt_inv, , , , 
