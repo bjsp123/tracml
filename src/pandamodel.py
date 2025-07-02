@@ -2,7 +2,6 @@ import typing as tp
 import tracdap.rt.api as trac
 
 import pandas as pd
-import tensorflow as tf
 
 import schemas as schemas
 
