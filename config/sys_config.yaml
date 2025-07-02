@@ -1,0 +1,10 @@
+storage:
+
+  defaultBucket: example_data
+  defaultFormat: CSV
+
+  buckets:
+    example_data: 
+      protocol: LOCAL
+      properties:
+        rootPath: ../data
