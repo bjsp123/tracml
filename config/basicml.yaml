@@ -3,7 +3,7 @@ job:
     parameters:
 
     inputs:
-      approved_loans: "inputs/accepted_loans_truncated.csv"
+      approved_loans_clean: "inputs/accepted_loans_truncated.csv"
 
     outputs:
       conclusions: "outputs/loans_results.csv"

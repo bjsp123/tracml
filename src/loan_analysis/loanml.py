@@ -2,6 +2,6 @@ import pandas
 
 def infer_truths(df):
 
-    r = df.clone()
+    r = df.copy()
 
     return r

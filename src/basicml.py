@@ -4,7 +4,7 @@ import tracdap.rt.api as trac
 import pandas as pd
 
 import schemas as schemas
-from loan_analysis import infer_truths
+from loan_analysis.loanml import infer_truths
 
 
 class PandaModel(trac.TracModel):
@@ -21,7 +21,7 @@ class PandaModel(trac.TracModel):
         
         loans_results = trac.load_schema(schemas, "loans_schema_kaggle.csv")
 
-        return {"conclusions": loans_results}
+        return {"conclusions": trac.ModelOutputSchema(loans_results)}
 
 
     def run_model(self, ctx: trac.TracContext):

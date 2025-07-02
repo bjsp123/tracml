@@ -6,6 +6,7 @@ import pandas as pd
 import schemas as schemas
 
 
+
 class PandaModel(trac.TracModel):
     def define_parameters(self) -> tp.Dict[str, trac.ModelParameter]:
 
